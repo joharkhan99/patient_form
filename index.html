@@ -9,6 +9,44 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
+    <style>
+        form{
+            border: 1px solid;
+        }
+        form span.input-group-addon{
+            background-color: white;
+            font-weight: bold;
+        }
+        form .input-group,form input,form .input-group-addon,form textarea{
+            border-radius: 0px !important;
+            border-color: transparent !important;
+            box-shadow: none;
+            resize: none;
+        }
+        form{
+            width: 100%;
+        }
+        form .row .col-md-3,form .row .col-md-4,form .row .col-md-6,form .row .col-md-8,form .row .col-md-12{
+            padding: 0;
+
+        }
+        form .row._grids .col-md-3,form .row._grids .col-md-4{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        form .row {
+            width: 100%;
+            margin: 0;
+            border-bottom: 1px solid;
+        }
+        form .row ._textarea span{
+            vertical-align: top;
+        }
+        form input ,form textarea{
+            box-shadow:inset 0px 0px 5px rgb(151, 196, 240) !important;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -18,7 +56,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <form class="form-horizontal" role="form" method="POST">
+                <form class="form-horizontal" role="form" method="POST" >
 
                     <!-- name -->
                     <div class="row">
@@ -119,7 +157,7 @@
                     <!-- diagnosis -->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="input-group">
+                            <div class="input-group _textarea">
                                 <span class="input-group-addon" id="name">Diagnosed With</span>
                                 <textarea name="name" id="name" cols="30" rows="10" class="form-control"
                                     aria-describedby="name"></textarea>
@@ -166,12 +204,48 @@
                     </div>
 
                     <!-- drugs -->
+                    <div class="row _grids">
+                        <div class="col-sm-1">
+                            <ol>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ol>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="bg-primary text-center">Drugs</p>
+                            <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                            <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                            <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                            <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <p class="bg-primary text-center">Unit (tablet)</p>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <p class="bg-primary text-center">Dosage (Per Day)</p>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                                <input type="number" class="form-control w-100" aria-describedby="name" name='name'>
+                            </div>
+                        </div>
+                    </div>
                     <!-- drugs -->
 
                     <!-- Diet to follow -->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="input-group">
+                            <div class="input-group _textarea">
                                 <span class="input-group-addon" id="name">Diet To Follow</span>
                                 <textarea name="name" id="name" cols="30" rows="10" class="form-control"
                                     aria-describedby="name"></textarea>
@@ -182,7 +256,7 @@
                     <!-- Brief History -->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="input-group">
+                            <div class="input-group _textarea">
                                 <span class="input-group-addon" id="name">Brief History of Patient</span>
                                 <textarea name="name" id="name" cols="30" rows="10" class="form-control"
                                     aria-describedby="name"></textarea>
